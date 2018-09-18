@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText("Score: " + score);
         throwDice();
     }
-    
+
     public void evaluateGuess(String input, int newRoll, int lastRoll) {
         if (input == "high") {
             if (newRoll > lastRoll) {
