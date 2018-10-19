@@ -1,0 +1,83 @@
+﻿=== LEVEL 1 ===
+
+What is the name of the newest version of Android?
+Android 8.1 (Oreo)
+
+In which Java file are the ID resources defined?
+R.java
+
+What is ART?
+Android Runtime Environment. It compiles the code you wrote so the machine can read it.
+
+In which resource directory are images stored?
+res/drawable
+
+Describe the difference between constraint layout and relative layout?
+RelativeLayout is based on relation of views with its parents and other views.
+ConstraintLayout is similar to a RelativeLayout because it uses relations to position and size objects and has additional flexibility and is easier to use in the LayoutEditor.
+Why do we need density-independent pixels?
+
+What are the differences between Toast and Snackbar?
+A toast is a small button-like pop-up, whereas a Snackbar is bigger because it takes up the whole bottom bar.
+
+What is the meaning of “this” in next code example:
+To access system services and resources (you need a layout inflater to create list item view)
+
+=== LEVEL 2 ===
+
+Explore this app and explain why recyclerview is called “recycler”
+because it reuses (recycles) a single viewholder for multiple items in the list.
+
+What is the difference of a staggered grid comparing to a normal grid?
+A staggered grid allows more flexible sizing, like different height. In a normal grid, every item needs to be the same height.
+
+What is the purpose of logcat?
+A general purpose logging console, used to display debug logs and error messages.
+
+Would you use logcat developing Android apps? Why or why not?
+Yes, Android on my phone only says 'the app stopped working' if it crashes, Logcat prints the entire error stack thus it is more useful for developing. (it's also integrated in Android Studio so that makes it easier).
+
+=== LEVEL 3 ===
+
+Explore this app and examine which lifecycle events are fired navigating from one activity to the other.
+onCreate from MainActivity
+onStart from MainActivity
+onResume from MainActivity
+toNextActivity from MainActivity
+onPause from MainActivity
+onCreate from NextActivity
+onStart from NextActivity
+onResume from NextActivity
+onStop from MainActivity
+onPause from NextActivity
+onRestart from MainActivity
+onStart from MainActivity
+onResume from MainActivity
+onStop from NextActivity
+onDestroy from NextActivity
+
+What is the difference between implicit and explicit intents?
+An explicit intent explicitally navigates from one screen to another. An implicit intent doesn't (need to) know which screens are being navigated to. 
+
+What is the difference between Parcelables and Serializables?
+Parceables require a custom implementation and are Android-specific. Whereas Serializable is a java-wide class.
+
+What is the purpose of the analyzer?
+To compare builds.
+
+=== LEVEL 4 ===
+
+A singleton pattern is used in the class that defines the database. What is the purpose of this pattern?
+All classes in the app need to be able to access the same instance of the database, otherwise they will instantiate a different database for each class, which doesn't have the same data.
+
+Why should you load the data in a background thread?
+Because it is an operation that doesn't run on the normal code thread. (It needs to look into files on the machine) and is therefore an async operation. Because you don't want the app to freeze while loading the data, you do it in the background.
+
+Why should you use breakpoint to debug your app?
+To see the values of your variables while in action.
+
+How can you extract the current database so that you can see the table, columns and its data?
+
+SELECT​​ name ​​FROM​ my_db.sqlite_master ​WHERE ​​type​=​'<table_name>'​;
+PRAGMA​ index_xinfo(<table_name>);
+SELECT​ * ​FROM​ <table_name>;
