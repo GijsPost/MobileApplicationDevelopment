@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Individual Assignment</string>
     <string name="action_settings">Settings</string>
+    <string name="add_app_id">Enter the game\'s app ID</string>
+    <string name="add_app_name">Enter the game\'s name</string>
+    <string name="add_app_button">Done</string>
+    <string name="main_title">Game News and Articles</string>
+    <string name="add_app_title">Add a new game</string>
+    <string name="news_title">News and Articles</string>
 </resources>

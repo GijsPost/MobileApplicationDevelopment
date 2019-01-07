@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements AppAdapter.AppCli
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Game News & Articles");
+        getSupportActionBar().setTitle(R.string.main_title);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

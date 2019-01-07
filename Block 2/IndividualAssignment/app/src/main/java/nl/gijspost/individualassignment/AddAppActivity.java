@@ -19,7 +19,7 @@ public class AddAppActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_app);
-        getSupportActionBar().setTitle("Add a new game");
+        getSupportActionBar().setTitle(R.string.add_app_title);
 
         appIdInputField = findViewById(R.id.appIdInput);
         appNameInputField = findViewById(R.id.appNameInput);

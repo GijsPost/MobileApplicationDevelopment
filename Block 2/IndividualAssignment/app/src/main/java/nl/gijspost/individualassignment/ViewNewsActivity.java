@@ -39,7 +39,7 @@ public class ViewNewsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         int appId = intent.getIntExtra("appid", 0);
         String appName = intent.getStringExtra("appname");
-        getSupportActionBar().setTitle(appName + " - News & Articles");
+        getSupportActionBar().setTitle(appName + " - " + getResources().getString(R.string.news_title));
 
         this.newsItemList = new ArrayList<Newsitem>();
         this.pageAdapter = new PageAdapter(getSupportFragmentManager());
